@@ -39,13 +39,12 @@ public class DeleteAdherent extends HttpServlet {
 	    
 		try 
 		{
-		    int id = Integer.parseInt(request.getParameter("id"));
+		    long id = Long.parseLong(request.getParameter("id"));
 		    Adherent a = em.find(Adherent.class, id);
 		    // Trouver la personne id=id
 		    if (a == null) 
 		    {
 		        System.out.println("Personne introuvable");
-		        request.getRequestDispatcher("List_User.jsp").forward(request, response);
 		    } 
 		    else 
 		    {
@@ -54,20 +53,20 @@ public class DeleteAdherent extends HttpServlet {
 		        em.remove(a); // supprimer l’objet
 		        em.getTransaction().commit();
 		        System.out.println("Personne supprimée");
-		        request.getRequestDispatcher("List_User.jsp").forward(request, response);
 		    }
 		}
 		catch (NumberFormatException e) 
 		{
 		    System.out.println("Invalid ID format: " + e.getMessage());
-		    request.getRequestDispatcher("List_User.jsp").forward(request, response);
 		} 
 		catch (Exception e) 
 		{
 		    System.out.println("An unexpected error occurred: " + e.getMessage());
-		    request.getRequestDispatcher("List_User.jsp").forward(request, response);
 		}
 
+		List<Adherent> adherentsList = em.createQuery("SELECT a FROM Adherent a", Adherent.class).getResultList();
+	    request.setAttribute("Adherents", adherentsList);
+	    request.getRequestDispatcher("List_User.jsp").forward(request, response);
 	    
 	}
 

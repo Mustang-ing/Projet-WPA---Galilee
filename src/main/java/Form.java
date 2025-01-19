@@ -22,7 +22,7 @@ public class Form extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	
-	 private static List<Adherent> adherents = new ArrayList<>();
+	 //private static List<Adherent> adherents = new ArrayList<>();
        
     public Form() {
         super();
@@ -40,6 +40,8 @@ public class Form extends HttpServlet {
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
 		
+		
+		
 		String Surname = request.getParameter("Nom");
 		if(Surname == null) throw new IllegalArgumentException("name cannot be null or empty");;
 		//LocalDate birthYear_Test = LocalDate.parse("Date_naissance");
@@ -50,6 +52,9 @@ public class Form extends HttpServlet {
         
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("projectBDD");
 		EntityManager em = emf.createEntityManager();
+		
+		List<Adherent> adherents = em.createQuery("SELECT a FROM Adherent a", Adherent.class).getResultList();
+
 		
 		Adherent a = new Adherent();
 		
@@ -69,6 +74,7 @@ public class Form extends HttpServlet {
 		em.getTransaction().commit();
 		
 
+		
 		request.setAttribute("Taille", taille);
 		request.setAttribute("Adherents", adherents);
         request.getRequestDispatcher("List_User.jsp").forward(request, response);
