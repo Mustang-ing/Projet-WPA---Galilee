@@ -4,12 +4,12 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Adherent 
@@ -35,7 +35,7 @@ public class Adherent
     private String codePostal;
 
     @Column(length = 50, nullable = false)
-    private String ville;
+    private String  ville;
 
     @Column(name = "adresse_courriel", length = 100, nullable = false, unique = true)
     private String adresseCourriel;

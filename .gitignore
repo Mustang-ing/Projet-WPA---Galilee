@@ -1,2 +1,66 @@
 /build/
-/target/
+
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+**/mvn/wrapper/maven-wrapper.jar
+.settings/
+.classpath
+.project
+
+# Logs
+*.log
+logs/
+
+# Tomcat specific
+tomcat.*
+/home/ing/tomcat/logs/*
+/home/ing/tomcat/work/*
+/home/ing/tomcat/temp/*
+/home/ing/tomcat/conf/*.properties
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# Eclipse
+*.classpath
+*.project
+*.settings/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# OS-specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Hibernate generated files
+hibernate*.log
+
+# Java compiled classes
+*.class
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.swp
+*~
+*.bak
+
+# JAR/WAR/EAR files
+*.war
+*.ear
+*.jar
