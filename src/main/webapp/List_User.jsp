@@ -41,8 +41,10 @@
             <td>+33 6 12 34 56 78</td>
             <td>15/01/2025</td>
             <td>
-                <button class="btn-form form-signup" type="submit" name="submit">Modifier</button> 
-                <button class="btn-form form-signup" type="submit" name="submit">Supprimer</button> 
+            	<a href=""> Inscrit des nouveaux membres !</a> </p>
+            	<a></a>
+                <button class="btn-form form-signup" name="modify">Modifier</button> 
+                <button class="btn-form form-signup" name="delete">Supprimer</button> 
             </td>
         </tr>
     </tbody>
@@ -67,8 +69,9 @@
        <td><!-- Add Phone if needed --></td>
        <td><!-- Add Payment Date if needed --></td>
        <td>
-           <button class="btn-form form-signup" type="submit">Modifier</button>
-           <button class="btn-form form-signup" type="submit">Supprimer</button>
+        	<button class="btn-form form-signup" type="submit">Modifier</button>
+           	<button class="btn-form form-signup" type="submit">Supprimer</button>
+          	<a href="DeleteAdherent?id=<%= adherent.getId() %>" class="btn-form form-signup">Supprimer</a>
        </td>
    </tr>
    <%
