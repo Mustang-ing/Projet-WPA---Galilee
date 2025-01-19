@@ -20,9 +20,9 @@ Le projet se fait en Jave EE (Ou Jakarta EE ).
 ## Tâche à terminer 
 Actuellement, voiçi les principaux chantier 
 
-- [ ] Page principal - Index.html
+- [x] Page principal - Index.html
     - [x] Lien vers les pages groupes et liste user
-    - [ ] Style
+    - [x] Style
 - [ ] Page Adhérent List_User.jsp
     - [x] Afficher les adhérents
         - [x] Connecter le projet à la JPA pour mettre en relation MariaDB
