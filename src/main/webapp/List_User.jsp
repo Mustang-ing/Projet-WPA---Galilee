@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.List" %>    
+<%@ page import="Class_Definition.Adherent" %>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,6 +46,45 @@
             </td>
         </tr>
     </tbody>
+    <tbody>
+    <!-- Dynamic population -->
+	   <%
+	       List<Adherent> adherents = (List<Adherent>) request.getAttribute("Adherents");
+	
+	       if (adherents != null && !adherents.isEmpty()) 
+	       {
+	           for (Class_Definition.Adherent adherent : adherents) 
+	           {
+	   %>
+   <tr>
+       <td><%= adherent.getPrenom() %></td>
+       <td><%= adherent.getNom() %></td>
+       <td><%= adherent.getDateNaissance() %></td>
+       <td><!-- Add other fields if needed --></td>
+       <td><!-- Add Code Postal if needed --></td>
+       <td><!-- Add Ville if needed --></td>
+       <td><!-- Add Email if needed --></td>
+       <td><!-- Add Phone if needed --></td>
+       <td><!-- Add Payment Date if needed --></td>
+       <td>
+           <button class="btn-form form-signup" type="submit">Modifier</button>
+           <button class="btn-form form-signup" type="submit">Supprimer</button>
+       </td>
+   </tr>
+   <%
+           }
+       } 
+	       else {
+   %>
+   <tr>
+       <td colspan="10">Aucun adhérent inscrit</td>
+   </tr>
+   <%
+       }
+   %>
+</tbody>  			
+</tbody>
+    
     
 </table>
 

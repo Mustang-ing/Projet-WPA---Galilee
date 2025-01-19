@@ -14,6 +14,7 @@
                     <h1>Inscription d'un nouvel adhérent </h1>
                     
 					<input type="text" name="Nom" id="Nom" placeholder="Votre nom"> </br>
+					<input type="text" name="Prenom" id="Prenom" placeholder="Votre Prenom"> </br>
 					<label for="date_naissance">Votre date de naissance</label>
 					<input type="date" name="Date_naissance" id="Date_naissance" placeholder="Date de naissance"></br>
 					<!--  
