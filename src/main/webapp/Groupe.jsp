@@ -3,27 +3,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Liste Groupe</title>
+    <meta charset="UTF-8">
+    <title>Liste Groupe</title>
+    <link rel="stylesheet" href="style/template.css">
+    <link rel="stylesheet" href="style/liste_utilisateurs.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
+   <header>
+	<nav>
+		<ul>
+			<li><a href="">Accueil</a></li>
+			<li><a href="">Liste des adhérents</a></li>
+			<li><a href="">Liste des groupes</a></li>
+		</ul>
+	</nav>
+</header>
+	
 <h1> Liste des groupes de l'association</h1>
 
 <table>
-    <caption>Groupes</caption>
-    <tr>
-        <th>Nom groupe</th>
-        <th>Liste inscrit </th>
-        
-    </tr>
-    <tr>
-        <td>G1</td>
-        <td>Adhérent inscrit</td>
-        <td> <button class="btn-form form-signup" type="submit" name="submit">Ajouter un adhérent</button> </td>
-        <td> <button class="btn-form form-signup" type="submit" name="submit">Suprimer un adhérent</button> </td>
-        <td> <button class="btn-form form-signup" type="submit" name="submit"> Supprimer groupe</button> </td>
-    </tr>
+    <thead>
+        <tr>
+            <th>Nom groupe</th>
+            <th>Liste inscrit </th>
+            <th colspan="3">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>G1</td>
+            <td>Adhérent inscrit</td>
+            <td><a class="btn btn-ajouter-add" href="#">Ajouter un adhérent</a></td>
+            <td><a class="btn btn-suppr-add" href="#">Supprimer un adhérent</a></td>
+            <td><a class="btn btn-suppr-grp" href="#">Supprimer groupe</a></td>
+        </tr>
+        <tr>
+            <td>G1</td>
+            <td>Adhérent inscrit</td>
+            <td><a class="btn btn-ajouter-add" href="#">Ajouter un adhérent</a></td>
+            <td><a class="btn btn-suppr-add" href="#">Supprimer un adhérent</a></td>
+            <td><a class="btn btn-suppr-grp" href="#">Supprimer groupe</a></td>
+        </tr>
+        <tr>
+            <td>G1</td>
+            <td>Adhérent inscrit</td>
+            <td><a class="btn btn-ajouter-add" href="#">Ajouter un adhérent</a></td>
+            <td><a class="btn btn-suppr-add" href="#">Supprimer un adhérent</a></td>
+            <td><a class="btn btn-suppr-grp" href="#">Supprimer groupe</a></td>
+        </tr>
+    </tbody>
 </table>
 
 <p> <a href="NewGroupe.jsp"> Faites un nouveau groupe</a> </p>

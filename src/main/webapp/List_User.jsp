@@ -90,7 +90,7 @@
        <td><!-- Add Phone if needed --></td>
        <td><!-- Add Payment Date if needed --></td>
        <td>
-        	<button class="btn-modifier" type="submit">Modifier</button>
+        	<a class="btn-modifier" type="submit">Modifier</a>
           	<a class="btn-supprimer" href="DeleteAdherent?id=<%= adherent.getId() %>" >Supprimer</a>
        </td>
    </tr>
