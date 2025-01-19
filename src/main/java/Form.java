@@ -22,7 +22,22 @@ public class Form extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		response.setContentType("text/html");
+		response.setCharacterEncoding("UTF-8");
+		
+		String name = request.getParameter("Nom");
+		if(name == null) throw new IllegalArgumentException("name cannot be null or empty");;
+		//LocalDate birthYear_Test = LocalDate.parse("Date_naissance");
+		String birthYear = request.getParameter("Date_naissance");
+		if(birthYear == null) throw new IllegalArgumentException("BirthYear cannot be null or empty");
+		
+		request.setAttribute("Name", name);
+		request.setAttribute("dateOfBirth", birthYear);
+		//request.setAttribute("dateOfBirth2", birthYear_Test);
+
+        request.getRequestDispatcher("age.jsp").forward(request, response);
 		
 		doGet(request, response);
 	}
