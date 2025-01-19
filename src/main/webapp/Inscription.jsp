@@ -12,7 +12,7 @@
             <div class="Form">
                 <form method="POST" action="Form" class="sign-in-form">
                     <h1>Inscription d'un nouvel adhérent </h1>
-					<input type="text" name="Nom" id="Nom" placeholder="Votre nom" value="Votre nom"> </br>
+					<input type="text" name="Nom" id="Nom" placeholder="Votre nom"> </br>
 					<label for="date_naissance">Votre date de naissance</label>
 					<input type="date" name="Date_naissance" id="Date_naissance" placeholder="Date de naissance" value="Votre date de naissance"></br>
 					<!--  
