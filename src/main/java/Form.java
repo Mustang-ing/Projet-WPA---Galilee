@@ -47,9 +47,9 @@ public class Form extends HttpServlet {
 		
 		Adherent a1 = new Adherent();
 		
-		a1.setNom("Z2N");
+		a1.setNom(name);
 		a1.setPrenom("Z20900");
-		a1.setDateNaissance("2001");
+		a1.setDateNaissance(birthYear);
 		
 		em.getTransaction().begin();
 		em.persist(a1);
