@@ -7,21 +7,6 @@
         <option name="useOptionalJvmOptions" value="true" />
         <option name="isUseOptionalJvmOptions" value="true" />
         <option name="isAlwaysUpdateSnapshot" value="true" />
-        <option name="projectsToBuild">
-          <list>
-            <ProjectToBuild>
-              <option name="displayName" value="Projet_Web" />
-              <option name="mavenArtifact">
-                <MavenArtifact>
-                  <option name="groupId" value="Projet_Web" />
-                  <option name="artifactId" value="Projet_Web" />
-                  <option name="version" value="0.0.1-SNAPSHOT" />
-                </MavenArtifact>
-              </option>
-              <option name="projectDictionary" value="$PROJECT_DIR$" />
-            </ProjectToBuild>
-          </list>
-        </option>
       </ExecutionSettings>
     </option>
     <option name="visibleSettings">
