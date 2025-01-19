@@ -24,14 +24,14 @@ Actuellement, voiçi les principaux chantier
     - [x] Lien vers les pages groupes et liste user
     - [ ] Style
 - [ ] Page Adhérent List_User.jsp
-    - [ ] Afficher les adhérents
-        - [ ] Connecter le projet à la JPA pour mettre en relation MariaDB
-    - [ ] Front-end de button pour ajouter/modifier ou supprimer des users
+    - [x] Afficher les adhérents
+        - [x] Connecter le projet à la JPA pour mettre en relation MariaDB
+    - [x] Front-end de button pour ajouter/modifier ou supprimer des users
     - [ ] Gêrer les fonctionnalités de modifications et de supression en temps réelle (Coté backend)
     - [ ] Style
 - [ ]  Page Formulaire - Inscription.jsp
     - [x] Champs de base du sujet
-    - [ ] Envoyer les information dans la BDD
+    - [x] Envoyer les information dans la BDD
     - [ ] Style
 - [ ] Page Groupe - Pas encore commencé
     - [ ] Front-end de button pour ajouter/modifier ou supprimer des groupes
