@@ -43,6 +43,13 @@
       <version>5.6.15.Final</version>
     </dependency>
 
+    <!-- RESTEasy (Javax REST API) -->
+    <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-jaxrs</artifactId>
+      <version>3.15.3.Final</version>
+    </dependency>
+
     <!-- Hibernate EntityManager -->
     <dependency>
       <groupId>org.hibernate</groupId>

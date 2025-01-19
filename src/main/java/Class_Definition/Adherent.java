@@ -27,6 +27,10 @@ public class Adherent
     @Column(name = "date_naissance", nullable = false)
     private String dateNaissance;
 
+    public Adherent() {
+    }
+
+
     /*
     @Column(length = 100, nullable = false)
     private String adresse;
