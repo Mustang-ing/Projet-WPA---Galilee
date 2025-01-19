@@ -1,5 +1,4 @@
 
-
 import Class_Definition.Adherent;
 
 import jakarta.servlet.ServletException;
@@ -41,7 +40,6 @@ public class List_Adherent extends HttpServlet {
 
 		request.setAttribute("Adherents", adherents);
         request.getRequestDispatcher("List_User.jsp").forward(request, response);
-
 	}
 
 	
