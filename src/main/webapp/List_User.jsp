@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.List" %>    
 <%@ page import="Class_Definition.Adherent" %>
+<%@ page import="jakarta.persistence.EntityManager, jakarta.persistence.EntityManagerFactory, jakarta.persistence.Persistence" %>
 
 
 <!DOCTYPE html>
@@ -11,6 +12,8 @@
 <title>Association sportive de Galilee</title>
 </head>
 <body>
+
+
 
 <h1> Liste des adhérent 2024-2025</h1>
 <table>
@@ -49,11 +52,16 @@
     <tbody>
     <!-- Dynamic population -->
 	   <%
-	       List<Adherent> adherents = (List<Adherent>) request.getAttribute("Adherents");
+		   EntityManagerFactory emf = Persistence.createEntityManagerFactory("projectBDD");
+	       EntityManager em = emf.createEntityManager();
+	       List<Adherent> adherentsList = em.createQuery("SELECT a FROM Adherent a", Adherent.class).getResultList();
+	       em.close();
+
+	       //List<Adherent> adherents = (List<Adherent>) request.getAttribute("Adherents");
 	
-	       if (adherents != null && !adherents.isEmpty()) 
+	       if (adherentsList != null && !adherentsList.isEmpty()) 
 	       {
-	           for (Class_Definition.Adherent adherent : adherents) 
+	           for (Class_Definition.Adherent adherent : adherentsList) 
 	           {
 	   %>
    <tr>
