@@ -8,14 +8,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Association sportive de Galilee</title>
+	<meta charset="UTF-8">
+	<title>Association sportive de Galilee</title>
+	<link rel="stylesheet" href="style/template.css">
+	<link rel="stylesheet" href="style/liste_utilisateurs.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-
+<header>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Accueil</a></li>
+                <li><a href="List_user.jsp">Liste des adhérents</a></li>
+                <li><a href="Groupe.jsp">Liste des groupes</a></li>
+            </ul>
+        </nav>
+    </header>
 
 <h1> Liste des adhérent 2024-2025</h1>
+
+<div class="container-tableau">
+
 <table>
     <caption>Adhérent</caption>
     <thead>
@@ -44,8 +59,8 @@
             <td>+33 6 12 34 56 78</td>
             <td>15/01/2025</td>
             <td>
-                <button class="btn-form form-signup" name="modify">Modifier</button> 
-                <button class="btn-form form-signup" name="delete">Supprimer</button> 
+                <button class="btn-form form-signup" name="btn-modifier">Modifier</button> 
+                <button class="btn-form form-signup" name="btn-supprimer">Supprimer</button> 
             </td>
         </tr>
     </tbody>
@@ -75,8 +90,8 @@
        <td><!-- Add Phone if needed --></td>
        <td><!-- Add Payment Date if needed --></td>
        <td>
-        	<button class="btn-form form-signup" type="submit">Modifier</button>
-          	<a class="btn-form form-signup" href="DeleteAdherent?id=<%= adherent.getId() %>" class="btn-form form-signup">Supprimer</a>
+        	<button class="btn-modifier" type="submit">Modifier</button>
+          	<a class="btn-supprimer" href="DeleteAdherent?id=<%= adherent.getId() %>" >Supprimer</a>
        </td>
    </tr>
    <%
@@ -95,8 +110,12 @@
     
     
 </table>
+</div>
 
 
-<p> <a href="Inscription.jsp"> Inscrit des nouveaux membres !</a> </p>
+<p> <a class="redirect" href="Inscription.jsp"> Inscrit des nouveaux membres !</a> </p>
+<footer>
+		<p>&copy; 2025 Association sportive de Galilée. Tous droits réservés.</p>
+</footer>
 </body>
 </html>
