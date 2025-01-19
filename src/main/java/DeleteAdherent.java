@@ -35,22 +35,40 @@ public class DeleteAdherent extends HttpServlet {
 		
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("projectBDD");
 		EntityManager em = emf.createEntityManager();
-			
-		Adherent a = EntityManager.find(Class<Adherent>, 4);
-		// Trouver la personne id=4
-		if (a == null) 
+		
+	    
+		try 
 		{
-			System.out.println("Personne introuvable");
+		    int id = Integer.parseInt(request.getParameter("id"));
+		    Adherent a = em.find(Adherent.class, id);
+		    // Trouver la personne id=id
+		    if (a == null) 
+		    {
+		        System.out.println("Personne introuvable");
+		        request.getRequestDispatcher("List_User.jsp").forward(request, response);
+		    } 
+		    else 
+		    {
+		        System.out.println("Personne.nom=" + a.getNom());
+		        em.getTransaction().begin();
+		        em.remove(a); // supprimer l’objet
+		        em.getTransaction().commit();
+		        System.out.println("Personne supprimée");
+		        request.getRequestDispatcher("List_User.jsp").forward(request, response);
+		    }
 		}
-		else 
+		catch (NumberFormatException e) 
 		{
-			System.out.println("Personne.nom=" + a.getNom());
-			EntityTransaction transac = entityManager.getTransaction();
-			transac.begin();
-			entityManager.remove(personne); // supprimer l’objet
-			transac.commit();
-			System.out.println("Personne supprimée");
+		    System.out.println("Invalid ID format: " + e.getMessage());
+		    request.getRequestDispatcher("List_User.jsp").forward(request, response);
+		} 
+		catch (Exception e) 
+		{
+		    System.out.println("An unexpected error occurred: " + e.getMessage());
+		    request.getRequestDispatcher("List_User.jsp").forward(request, response);
 		}
+
+	    
 	}
 
 
