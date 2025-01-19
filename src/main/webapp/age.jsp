@@ -7,6 +7,13 @@
 <title>Result</title>
 </head>
 <body>
-	<h1> Votre age est : <%= request.getAttribute("age") %> </h1>
+	<h1>Test in progress  </h1>
+	<p>  </p>
+	<ul>
+		<li> Nom : <%= request.getAttribute("Name") %> </li>
+		<li> Date de naissance : <%= request.getAttribute("dateOfBirth") %>
+		
+	
+	</ul>
 </body>
 </html>
