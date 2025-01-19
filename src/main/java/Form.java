@@ -1,4 +1,5 @@
 
+import Class_Definition.Adherent;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -6,6 +7,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.time.LocalDate;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+
 
 
 @WebServlet("/Form")
@@ -31,15 +38,33 @@ public class Form extends HttpServlet {
 		if(name == null) throw new IllegalArgumentException("name cannot be null or empty");;
 		//LocalDate birthYear_Test = LocalDate.parse("Date_naissance");
 		String birthYear = request.getParameter("Date_naissance");
-		if(birthYear == null) throw new IllegalArgumentException("BirthYear cannot be null or empty");
+		if(birthYear == null) throw new IllegalArgumentException("BirthYear cannot be null or empty");;
+
+        
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("projectBDD");
+		EntityManager em = emf.createEntityManager();
+		
+		Adherent a1 = new Adherent();
+		
+		a1.setNom("Z2N");
+		a1.setPrenom("Z20900");
+		a1.setDateNaissance("2001");
+		
+		em.getTransaction().begin();
+		em.persist(a1);
+		em.getTransaction().commit();
+		
+/* //Test pour reception data formulaire 
 		
 		request.setAttribute("Name", name);
 		request.setAttribute("dateOfBirth", birthYear);
 		//request.setAttribute("dateOfBirth2", birthYear_Test);
 
         request.getRequestDispatcher("age.jsp").forward(request, response);
+        */
 		
-		doGet(request, response);
+
+		//doGet(request, response);
 	}
 
 }
