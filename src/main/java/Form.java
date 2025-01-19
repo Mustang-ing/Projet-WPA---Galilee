@@ -71,11 +71,6 @@ public class Form extends HttpServlet {
 
 		request.setAttribute("Taille", taille);
 		request.setAttribute("Adherents", adherents);
-		/*
-		request.setAttribute("Name", name);
-		request.setAttribute("dateOfBirth", birthYear);
-		//request.setAttribute("dateOfBirth2", birthYear_Test);
-		*/
         request.getRequestDispatcher("List_User.jsp").forward(request, response);
         
 		
