@@ -11,9 +11,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 
+
+
 @Entity
 public class Adherent 
 {
+	public Adherent() {}
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;

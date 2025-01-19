@@ -55,6 +55,27 @@
 		    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
 		    <version>3.0.2</version>
 		</dependency>
+		
+		  <!-- RESTEasy (Javax REST API) -->
+    <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-jaxrs</artifactId>
+      <version>3.15.3.Final</version>
+    </dependency>
+    
+    <!-- Jersey Server -->
+    <dependency>
+        <groupId>org.glassfish.jersey.core</groupId>
+        <artifactId>jersey-server</artifactId>
+        <version>3.1.0</version>
+    </dependency>
+    
+     <!-- Jakarta RESTful Web Services API -->
+    <dependency>
+        <groupId>jakarta.ws.rs</groupId>
+        <artifactId>jakarta.ws.rs-api</artifactId>
+        <version>3.1.0</version>
+    </dependency>
 
 	</dependencies>
   

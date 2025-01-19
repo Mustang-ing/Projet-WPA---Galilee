@@ -34,19 +34,19 @@
 							<label for="Nom">Votre nom</label>
 							<input type="text" name="Nom" id="Nom" placeholder="Votre nom">
 						</div>
-					</div>
+					
 						
-					<div class="container-columns">
 						<div class="form-column">
 							<label for="Prenom">Votre prenom</label>
 							<input type="text" name="Prenom" id="Prenom" placeholder="Votre prenom">
+						</div>
 					</div>
+					
 
 						<div class="form-column">
 							<label for="Date_naissance">Votre date de naissance</label>
 							<input type="date" name="Date_naissance" id="Date_naissance" placeholder="Date de naissance">
 						</div>
-					</div>
 
 					<label for="e-mail">Votre email</label>
 					<input type="email" name="email" id="email" placeholder="Adresse e-mail" ="Votre e-mail">
