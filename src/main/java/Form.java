@@ -49,6 +49,36 @@ public class Form extends HttpServlet {
 		String birthYear = request.getParameter("Date_naissance");
 		if(birthYear == null) throw new IllegalArgumentException("BirthYear cannot be null or empty");;
 
+		String adresse = request.getParameter("Adresse");
+		if (adresse == null || adresse.isEmpty()) {
+		    throw new IllegalArgumentException("Adresse cannot be null or empty");
+		}
+		
+		String codePostal = request.getParameter("Code_postal");
+		if (codePostal == null || codePostal.isEmpty()) {
+		    throw new IllegalArgumentException("Code_postal cannot be null or empty");
+		}
+		
+		String ville = request.getParameter("Ville");
+		if (ville == null || ville.isEmpty()) {
+		    throw new IllegalArgumentException("Ville cannot be null or empty");
+		}
+		
+		String adresseCourriel = request.getParameter("email");
+		if (adresseCourriel == null || adresseCourriel.isEmpty()) {
+		    throw new IllegalArgumentException("Adresse_courriel cannot be null or empty");
+		}
+		
+		String numeroTelephone = request.getParameter("Telephone");
+		if (numeroTelephone == null || numeroTelephone.isEmpty()) {
+		    throw new IllegalArgumentException("Numero_telephone cannot be null or empty");
+		}
+		
+		String paiementCotisation = request.getParameter("Date_paiement");
+		String datePaiementCotisation = null;
+		if (paiementCotisation != null && !paiementCotisation.isEmpty()) {
+		    datePaiementCotisation = paiementCotisation; // Ensure proper date format (YYYY-MM-DD)
+		}
         
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("projectBDD");
 		EntityManager em = emf.createEntityManager();
@@ -61,6 +91,12 @@ public class Form extends HttpServlet {
 		a.setNom(Surname);
 		a.setPrenom(Name);
 		a.setDateNaissance(birthYear);
+		a.setAdresse(adresse);
+		a.setCodePostal(codePostal);
+	    a.setVille(ville);
+	    a.setAdresseCourriel(adresseCourriel);
+	    a.setNumeroTelephone(numeroTelephone);
+	    a.setDatePaiementCotisation(datePaiementCotisation);
 		
 		adherents.add(a);
 		

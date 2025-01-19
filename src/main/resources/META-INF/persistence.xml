@@ -15,7 +15,7 @@
             <property name="jakarta.persistence.jdbc.user" value="ing-mustang" />
             <property name="jakarta.persistence.jdbc.password" value="NewBDgenerated11" />
                  
-            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
             <!--  Warning use none or update in production level, instead of drop-create ! -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDB102Dialect"/>
         </properties>

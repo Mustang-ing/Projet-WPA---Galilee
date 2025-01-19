@@ -25,7 +25,6 @@
  <section>
         <main>
             <div class="container-form">
-				
 				<form method="POST" action="Form" class="sign-in-form">
 					<h1>Inscription d'un nouvel adhérent </h1>
 
@@ -34,43 +33,37 @@
 							<label for="Nom">Votre nom</label>
 							<input type="text" name="Nom" id="Nom" placeholder="Votre nom">
 						</div>
-					
-						
 						<div class="form-column">
-							<label for="Prenom">Votre prenom</label>
-							<input type="text" name="Prenom" id="Prenom" placeholder="Votre prenom">
+							<label for="Prenom">Votre prénom</label>
+							<input type="text" name="Prenom" id="Prenom" placeholder="Prenom">
 						</div>
 					</div>
 					
-
-						<div class="form-column">
-							<label for="Date_naissance">Votre date de naissance</label>
-							<input type="date" name="Date_naissance" id="Date_naissance" placeholder="Date de naissance">
-						</div>
+					<label for="Date_naissance">Votre date de naissance</label>
+					<input type="date" name="Date_naissance" id="Date_naissance" placeholder="Date de naissance">
 
 					<label for="e-mail">Votre email</label>
-					<input type="email" name="email" id="email" placeholder="Adresse e-mail" ="Votre e-mail">
+					<input type="email" name="email" id="email" placeholder="Adresse e-mail">
 
 					<div class="container-columns">
 						<div class="form-column">
 							<label for="Adresse">Votre Adresse</label>
-							<input type="text" name="Adresse" id="Adresse" placeholder="Adresse" ="Votre adresse">
+							<input type="text" name="Adresse" id="Adresse" placeholder="Adresse">
 						</div>
-
 						<div class="form-column">
 							<label for="Code_postal">Votre code postal</label>
-							<input type="text" name="Code_postal" id="Code_postal" placeholder="Code postal" ="Votre code postal" maxlength="5">
+							<input type="text" name="Code_postal" id="Code_postal" placeholder="Code postal" maxlength="5">
 						</div>
 					</div>
 
 					<label for="Ville">Votre ville</label>
-					<input type="text" name="Ville" id="Ville" placeholder="Ville" ="Votre ville">
+					<input type="text" name="Ville" id="Ville" placeholder="Ville">
 
 					<label for="Telephone">Votre numéro de télephone</label>
 					<input type="tel" name="Telephone" id="Telephone" placeholder="Numéro de téléphone">
 					
 					<label for="date_paiement">La date de paiement de votre cotisation</label>
-					<input type="date" name="Date_paiement" id="Date_paiement" placeholder="Date de paiement de la cotisation" ="La date de paiement de votre cotisation">
+					<input type="date" name="Date_paiement" id="Date_paiement" placeholder="Date de paiement de la cotisation">
 					
                     <button class="btn-form form-signup" type="submit" name="submit">Ajouter l'adhérent</button>
                 </form>

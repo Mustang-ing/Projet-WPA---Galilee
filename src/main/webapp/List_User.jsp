@@ -48,23 +48,6 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>01/01/1990</td>
-            <td>123 Rue de Paris</td>
-            <td>75000</td>
-            <td>Paris</td>
-            <td>johndoe@example.com</td>
-            <td>+33 6 12 34 56 78</td>
-            <td>15/01/2025</td>
-            <td>
-                <button class="btn-form form-signup" name="btn-modifier">Modifier</button> 
-                <button class="btn-form form-signup" name="btn-supprimer">Supprimer</button> 
-            </td>
-        </tr>
-    </tbody>
-    <tbody>
     <!-- Dynamic population -->
 	   <%
 		   EntityManagerFactory emf = Persistence.createEntityManagerFactory("projectBDD");
@@ -83,14 +66,14 @@
        <td><%= adherent.getPrenom() %></td>
        <td><%= adherent.getNom() %></td>
        <td><%= adherent.getDateNaissance() %></td>
-       <td><!-- Add other fields if needed --></td>
-       <td><!-- Add Code Postal if needed --></td>
-       <td><!-- Add Ville if needed --></td>
-       <td><!-- Add Email if needed --></td>
-       <td><!-- Add Phone if needed --></td>
-       <td><!-- Add Payment Date if needed --></td>
+       <td><%= adherent.getAdresse() %></td>
+	   <td><%= adherent.getCodePostal() %></td>
+	   <td><%= adherent.getVille() %></td>
+	   <td><%= adherent.getAdresseCourriel() %></td>
+	   <td><%= adherent.getNumeroTelephone() %></td>
+	   <td><%= adherent.getDatePaiementCotisation() %></td>
        <td>
-        	<a class="btn-modifier" type="submit">Modifier</a>
+        	<a class="btn-modifier" type="submit">Modifier </a>
           	<a class="btn-supprimer" href="DeleteAdherent?id=<%= adherent.getId() %>" >Supprimer</a>
        </td>
    </tr>

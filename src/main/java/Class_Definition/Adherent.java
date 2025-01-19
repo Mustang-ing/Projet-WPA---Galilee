@@ -16,7 +16,7 @@ import jakarta.persistence.ManyToMany;
 @Entity
 public class Adherent 
 {
-	public Adherent() {}
+	//public Adherent() {}
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
@@ -30,26 +30,26 @@ public class Adherent
     @Column(name = "date_naissance")
     private String dateNaissance;
 
-    /*
-    @Column(length = 100, nullable = false)
+    
+    @Column(length = 100)
     private String adresse;
 
-    @Column(name = "code_postal", length = 10, nullable = false)
+    @Column( length = 10)
     private String codePostal;
 
-    @Column(length = 50, nullable = false)
+    @Column(length = 50)
     private String ville;
 
-    @Column(name = "adresse_courriel", length = 100, nullable = false, unique = true)
+    @Column( length = 100)
     private String adresseCourriel;
 
-    @Column(name = "numero_telephone", length = 15, nullable = false)
+    @Column(length = 15)
     private String numeroTelephone;
 
-    @Column(name = "date_paiement_cotisation", nullable = false)
-    private LocalDate datePaiementCotisation;
+    @Column
+    private String datePaiementCotisation;
     
-    */
+ 
     @ManyToMany
     //private List<Adherent> Adherents = new ArrayList<>();
     
@@ -94,7 +94,7 @@ public class Adherent
     	return Adherents;
     }
 
-    
+    */
     public String getAdresse() {
         return adresse;
     }
@@ -135,13 +135,13 @@ public class Adherent
         this.numeroTelephone = numeroTelephone;
     }
 
-    public LocalDate getDatePaiementCotisation() {
+    public String getDatePaiementCotisation() {
         return datePaiementCotisation;
     }
 
-    public void setDatePaiementCotisation(LocalDate datePaiementCotisation) {
+    public void setDatePaiementCotisation(String datePaiementCotisation) {
         this.datePaiementCotisation = datePaiementCotisation;
     }
-    */
+   
 
 }
