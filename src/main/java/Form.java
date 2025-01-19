@@ -31,6 +31,7 @@ public class Form extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
 		
@@ -54,14 +55,14 @@ public class Form extends HttpServlet {
 		em.persist(a1);
 		em.getTransaction().commit();
 		
-/* //Test pour reception data formulaire 
+
 		
 		request.setAttribute("Name", name);
 		request.setAttribute("dateOfBirth", birthYear);
 		//request.setAttribute("dateOfBirth2", birthYear_Test);
 
         request.getRequestDispatcher("age.jsp").forward(request, response);
-        */
+        
 		
 
 		//doGet(request, response);
