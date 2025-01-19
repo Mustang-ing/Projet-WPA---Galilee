@@ -18,13 +18,13 @@ public class Adherent
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@Column(length = 40, nullable = false)
+	@Column(length = 40)
     private String nom;
 
-    @Column(length = 40, nullable = false)
+    @Column(length = 40)
     private String prenom;
 
-    @Column(name = "date_naissance", nullable = false)
+    @Column(name = "date_naissance")
     private String dateNaissance;
 
     /*
@@ -48,7 +48,7 @@ public class Adherent
     
     */
     @ManyToMany
-    private List<Adherent> Adherents = new ArrayList<>();
+    //private List<Adherent> Adherents = new ArrayList<>();
     
     
 
@@ -84,8 +84,14 @@ public class Adherent
     public void setDateNaissance(String dateNaissance) {
         this.dateNaissance = dateNaissance;
     }
-
+    
     /*
+    public List<Adherent> getAdherent()
+    {
+    	return Adherents;
+    }
+
+    
     public String getAdresse() {
         return adresse;
     }

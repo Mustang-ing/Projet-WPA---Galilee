@@ -8,6 +8,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -18,6 +20,9 @@ import jakarta.persistence.Persistence;
 @WebServlet("/Form")
 public class Form extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	
+	 private static List<Adherent> adherents = new ArrayList<>();
        
     public Form() {
         super();
@@ -35,9 +40,10 @@ public class Form extends HttpServlet {
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
 		
-		String name = request.getParameter("Nom");
-		if(name == null) throw new IllegalArgumentException("name cannot be null or empty");;
+		String Surname = request.getParameter("Nom");
+		if(Surname == null) throw new IllegalArgumentException("name cannot be null or empty");;
 		//LocalDate birthYear_Test = LocalDate.parse("Date_naissance");
+		String Name = request.getParameter("Prenom");
 		String birthYear = request.getParameter("Date_naissance");
 		if(birthYear == null) throw new IllegalArgumentException("BirthYear cannot be null or empty");;
 
@@ -45,23 +51,32 @@ public class Form extends HttpServlet {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("projectBDD");
 		EntityManager em = emf.createEntityManager();
 		
-		Adherent a1 = new Adherent();
+		Adherent a = new Adherent();
 		
-		a1.setNom(name);
-		a1.setPrenom("Z20900");
-		a1.setDateNaissance(birthYear);
+		a.setNom(Surname);
+		a.setPrenom(Name);
+		a.setDateNaissance(birthYear);
+		
+		adherents.add(a);
+		
+		System.out.println("Surname : " + a.getNom() + "Name : " + a.getPrenom());
+		//a.getAdherent().add(a);
+		
+		int taille = adherents.size();
 		
 		em.getTransaction().begin();
-		em.persist(a1);
+		em.persist(a);
 		em.getTransaction().commit();
 		
 
-		
+		request.setAttribute("Taille", taille);
+		request.setAttribute("Adherents", adherents);
+		/*
 		request.setAttribute("Name", name);
 		request.setAttribute("dateOfBirth", birthYear);
 		//request.setAttribute("dateOfBirth2", birthYear_Test);
-
-        request.getRequestDispatcher("age.jsp").forward(request, response);
+		*/
+        request.getRequestDispatcher("List_User.jsp").forward(request, response);
         
 		
 
