@@ -15,7 +15,7 @@ Le projet comporte plusieurs page Web
 - Page web pour les groupes (Voir les groupes/jouter/Modifier/Supprimer un groupe , Ajouter des adhérent dans un groupe)
 - Page pour créer un groupe (Rapide)
 
-Le projet se fait en Jave EE (Ou Jakarta EE ).
+Le projet se fait en Java EE (Ou Jakarta EE ).
 
 ## Tâche à terminer 
 Actuellement, voiçi les principaux chantier 
