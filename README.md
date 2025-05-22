@@ -20,30 +20,30 @@ Le projet se fait en Jave EE (Ou Jakarta EE ).
 ## Tâche à terminer 
 Actuellement, voiçi les principaux chantier 
 
-- [ ] Page principal - Index.html
+- [X] Page principal - Index.html
     - [x] Lien vers les pages groupes et liste user
-    - [ ] Style
-- [ ] Page Adhérent List_User.jsp
-    - [ ] Afficher les adhérents
-        - [ ] Connecter le projet à la JPA pour mettre en relation MariaDB
-    - [ ] Front-end de button pour ajouter/modifier ou supprimer des users
-    - [ ] Gêrer les fonctionnalités de modifications et de supression en temps réelle (Coté backend)
-    - [ ] Style
-- [ ]  Page Formulaire - Inscription.jsp
+    - [X] Style
+- [X] Page Adhérent List_User.jsp
+    - [X] Afficher les adhérents
+        - [X] Connecter le projet à la JPA pour mettre en relation MariaDB
+    - [X] Front-end de button pour ajouter/modifier ou supprimer des users
+    - [X] Gêrer les fonctionnalités de modifications et de supression en temps réelle (Coté backend)
+    - [X] Style
+- [X]  Page Formulaire - Inscription.jsp
     - [x] Champs de base du sujet
-    - [ ] Envoyer les information dans la BDD
-    - [ ] Style
+    - [X] Envoyer les information dans la BDD
+    - [X] Style
 - [ ] Page Groupe - Pas encore commencé
-    - [ ] Front-end de button pour ajouter/modifier ou supprimer des groupes
+    - [X] Front-end de button pour ajouter/modifier ou supprimer des groupes
     - [ ] Gêrer les fonctionnalités de modifications et de supression en temps réelle (Coté Backend)
     - [ ] Ajouter des user en respectant la contraintes
     - [ ] Style
 
-- [ ] Webservices REST
-    - [ ] Création, modification, suppression, lister les adhérents
-    - [ ] Lister les groupes et les personnes rattachées
+- [X] Webservices REST
+    - [X] Création, modification, suppression, lister les adhérents
+    - [X] Lister les groupes et les personnes rattachées
 
-- [ ] Test Selenium 
+- [ ] Test Selenium (Codé, mais non opérationnelle)
 
   Note : Ajouter des users doit rediger le client vers Form.html 
   
